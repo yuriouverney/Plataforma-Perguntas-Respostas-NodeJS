@@ -1,8 +1,11 @@
 const express = require('express');
 const app = express()
 
+//setando o express para utilizar o EJS como view engine
+app.set('view engine', 'ejs');
+
 app.get('/', (req, res) => {
-    res.send("Servidor rodando")
+    res.render('index')
 })
 
 port = 3000
